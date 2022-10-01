@@ -1,0 +1,209 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+button {
+  background: none;
+  border: none;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+input {
+  outline: none;
+  padding: 0.5rem;
+  height: 32px;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.truncate {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.App {
+  background: rgb(211, 210, 210);
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.App .wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App .wrapper .form-wrapper {
+  min-height: 40vh;
+  min-width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
+  border: 1px solid;
+  border-radius: 1rem;
+}
+.App .wrapper .form-wrapper .form {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.App .wrapper .form-wrapper .form .label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.App .wrapper .form-wrapper .form .label input {
+  width: 60%;
+}
+.App .wrapper .form-wrapper .form button {
+  background: lightseagreen;
+  border-radius: 0.2rem;
+  justify-self: flex-end;
+}
+.App .list-wrapper {
+  margin: 1rem;
+  display: "flex";
+  flex-direction: "column";
+  align-items: center;
+  padding-bottom: 2rem;
+}
+.App .list-wrapper .list__title {
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+.App .list-wrapper .list__title h1 {
+  font-weight: 500;
+}
+.App .list-wrapper .list__title h3 {
+  font-weight: 500;
+}
+.App .list-wrapper .feeds {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.App .list-wrapper .feeds .feed {
+  width: 90%;
+  height: 40px;
+  background: #fff;
+  border-radius: 4px;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  position: relative;
+}
+.App .list-wrapper .feeds .feed .commit__date {
+  min-width: 160px;
+}
+.App .list-wrapper .feeds .feed .commit__link {
+  width: 80%;
+  height: 20px;
+  flex: 1;
+}
+.App .list-wrapper .feeds .feed .commit__message {
+  width: 200px;
+  min-width: 200px;
+}
+.App .list-wrapper .feeds .feed .commit__message:before {
+  content: attr(data-text);
+  position: absolute;
+  z-index: 10;
+  cursor: pointer;
+  /* vertically center */
+  top: 100%;
+  transform: translateY(-50%);
+  /* move to right */
+  left: 35%;
+  margin-left: 15px; /* and add a small left margin */
+  /* basic styles */
+  width: 43%;
+  max-height: 150px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 10px;
+  border-radius: 4px;
+  background: gray;
+  color: #fff;
+  text-align: left;
+  display: none; /* hide by default */
+}
+.App .list-wrapper .feeds .feed .commit__message:hover {
+  cursor: pointer;
+}
+.App .list-wrapper .feeds .feed .commit__message:hover:before {
+  display: block;
+}
+.App .list-wrapper .buttons-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.App .list-wrapper .buttons-wrapper button {
+  background: lightseagreen;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+}
+.App .list-wrapper .buttons-wrapper button:hover {
+  cursor: pointer;
+  background: rgb(21, 112, 108);
+  color: #fff;
+}
+.App .list-wrapper .buttons-wrapper .back-btn {
+  background: gray;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 500;
+}
+.App .list-wrapper .buttons-wrapper .back-btn:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.App .error-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  text-align: left;
+}
+.App .error-wrapper h1 {
+  margin-bottom: 2rem;
+}
+.App .error-wrapper .error {
+  color: orangered;
+}
+.App .error-wrapper .back-btn {
+  margin-top: 1rem;
+  background: gray;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 500;
+}
+.App .error-wrapper .back-btn:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}/*# sourceMappingURL=style.css.map */
