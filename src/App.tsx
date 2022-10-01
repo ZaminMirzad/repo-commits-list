@@ -4,14 +4,6 @@ import { Routes, Route } from 'react-router-dom';
 import List from './components/List';
 import { Error } from './components/Error';
 
-// type Props = {
-//   error: {
-//     code: string;
-//     message: string;
-//     response: { data: { message: string } };
-//   };
-// };
-
 function App() {
   const [commits, setCommits] = useState([]);
   const [error, setError] = useState();

@@ -25,7 +25,7 @@ const List = ({ commits, setCommits, setError }: Props) => {
         url: `https://api.github.com/repos/${params.user}/${params.repo}/commits?page=${page}`,
         headers: {
           accept: 'application/vnd.github.v3+json',
-          Authorization: `token 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`,
+          Authorization: `token ${process.env.REACT_APP_TOKEN}`,
         },
       });
 
